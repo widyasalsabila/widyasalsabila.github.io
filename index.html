@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
+
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>My Awesome Blog</title>
+  <title>Chat Widya</title>
 
-  <meta name="description" content="Blog modern gratis menggunakan GitHub Pages dan support popup ads." />
+  <meta name="description" content="Chat Widya di sini yuk..." />
 
   <!-- Google Font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,9 +17,9 @@
 
   <!-- Popup Ads Script -->
   <script src="https://pl29444325.effectivecpmnetwork.com/70/2c/39/702c39fed30a684402566577ae69e564.js"></script>
-</head>
 
   <style>
+
     *{
       margin:0;
       padding:0;
@@ -27,374 +28,125 @@
 
     body{
       font-family:'Poppins',sans-serif;
-      background:#0f172a;
-      color:white;
-      line-height:1.7;
-    }
-
-    a{
-      text-decoration:none;
-    }
-
-    header{
-      position:sticky;
-      top:0;
-      z-index:999;
-      background:#111827;
-      border-bottom:1px solid #1f2937;
-    }
-
-    .navbar{
-      max-width:1200px;
-      margin:auto;
-      padding:20px;
+      background:linear-gradient(135deg,#0f172a,#1e293b);
+      height:100vh;
       display:flex;
-      justify-content:space-between;
+      justify-content:center;
       align-items:center;
-    }
-
-    .logo{
-      font-size:28px;
-      font-weight:700;
-      color:#60a5fa;
-    }
-
-    nav a{
-      color:#cbd5e1;
-      margin-left:20px;
-      transition:0.3s;
-      font-weight:500;
-    }
-
-    nav a:hover{
-      color:#60a5fa;
-    }
-
-    .hero{
-      padding:100px 20px;
-      text-align:center;
-      background:linear-gradient(to right,#1e293b,#0f172a);
-    }
-
-    .hero h1{
-      font-size:52px;
-      margin-bottom:20px;
-      color:#93c5fd;
-    }
-
-    .hero p{
-      max-width:800px;
-      margin:auto;
-      color:#cbd5e1;
-      font-size:18px;
-    }
-
-    .hero .btn{
-      display:inline-block;
-      margin-top:30px;
-      padding:14px 28px;
-      background:#2563eb;
-      border-radius:10px;
+      overflow:hidden;
       color:white;
-      transition:0.3s;
-      font-weight:600;
-    }
-
-    .hero .btn:hover{
-      background:#1d4ed8;
-    }
-
-    .section-title{
-      text-align:center;
-      font-size:36px;
-      margin-bottom:50px;
-      color:#93c5fd;
     }
 
     .container{
-      max-width:1200px;
-      margin:auto;
-      padding:80px 20px;
+      text-align:center;
+      padding:40px 30px;
+      background:rgba(255,255,255,0.05);
+      border:1px solid rgba(255,255,255,0.08);
+      border-radius:24px;
+      backdrop-filter:blur(10px);
+      width:90%;
+      max-width:420px;
+      box-shadow:0 10px 40px rgba(0,0,0,0.4);
+      animation:fadeIn 1s ease;
     }
 
-    .grid{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
-      gap:30px;
+    h1{
+      font-size:34px;
+      line-height:1.4;
+      margin-bottom:30px;
+      color:#ffffff;
     }
 
-    .card{
-      background:#1e293b;
-      border-radius:16px;
-      overflow:hidden;
-      border:1px solid #334155;
-      transition:0.3s;
-    }
-
-    .card:hover{
-      transform:translateY(-6px);
-    }
-
-    .card img{
-      width:100%;
-      height:220px;
-      object-fit:cover;
-    }
-
-    .card-content{
-      padding:24px;
-    }
-
-    .card-content h3{
-      margin-bottom:12px;
-      color:#bfdbfe;
-    }
-
-    .card-content p{
-      color:#cbd5e1;
-      font-size:15px;
-    }
-
-    .card-content .btn{
-      display:inline-block;
-      margin-top:18px;
-      background:#2563eb;
-      padding:10px 18px;
-      border-radius:8px;
+    .whatsapp-btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:14px;
+      background:#25D366;
       color:white;
+      text-decoration:none;
+      padding:16px 28px;
+      border-radius:16px;
+      font-size:20px;
+      font-weight:600;
       transition:0.3s;
+      box-shadow:0 8px 24px rgba(37,211,102,0.35);
     }
 
-    .card-content .btn:hover{
-      background:#1d4ed8;
+    .whatsapp-btn:hover{
+      transform:scale(1.05);
     }
 
-    .features{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-      gap:25px;
-      margin-top:50px;
+    .whatsapp-icon{
+      width:34px;
+      height:34px;
+      fill:white;
     }
 
-    .feature-box{
-      background:#1e293b;
-      padding:30px;
-      border-radius:14px;
-      border:1px solid #334155;
-      text-align:center;
-    }
-
-    .feature-box h3{
-      margin-bottom:12px;
-      color:#93c5fd;
-    }
-
-    .feature-box p{
+    .footer{
+      margin-top:28px;
+      font-size:13px;
       color:#cbd5e1;
-      font-size:14px;
+      opacity:0.8;
     }
 
-    footer{
-      margin-top:60px;
-      padding:40px 20px;
-      text-align:center;
-      border-top:1px solid #1f2937;
-      color:#94a3b8;
+    @keyframes fadeIn{
+      from{
+        opacity:0;
+        transform:translateY(20px);
+      }
+
+      to{
+        opacity:1;
+        transform:translateY(0);
+      }
     }
 
-    @media(max-width:768px){
+    @media(max-width:480px){
 
-      .navbar{
-        flex-direction:column;
+      h1{
+        font-size:28px;
       }
 
-      nav{
-        margin-top:15px;
-      }
-
-      nav a{
-        margin:0 8px;
-      }
-
-      .hero h1{
-        font-size:36px;
-      }
-
-      .hero p{
-        font-size:16px;
+      .whatsapp-btn{
+        width:100%;
+        font-size:18px;
       }
 
     }
 
   </style>
+
 </head>
 
 <body>
 
-<header>
-  <div class="navbar">
+  <div class="container">
 
-    <div class="logo">
-      My Awesome Blog
-    </div>
+    <h1>
+      Chat Widya di sini yuk...
+    </h1>
 
-    <nav>
-      <a href="#">Home</a>
-      <a href="#">Artikel</a>
-      <a href="#">Anime</a>
-      <a href="#">Movie</a>
-      <a href="#">Download</a>
-      <a href="#">Contact</a>
-    </nav>
+    <!-- GANTI LINK WHATSAPP DI BAWAH -->
+    <a 
+      href="https://wa.me/6281234567890" 
+      class="whatsapp-btn"
+      target="_blank"
+    >
 
-  </div>
-</header>
+      <svg class="whatsapp-icon" viewBox="0 0 32 32">
+        <path d="M19.11 17.21c-.29-.14-1.72-.85-1.99-.95-.27-.1-.47-.14-.67.14-.2.29-.77.95-.94 1.15-.17.2-.35.22-.64.07-.29-.14-1.22-.45-2.33-1.42-.86-.77-1.45-1.72-1.62-2.01-.17-.29-.02-.45.13-.6.13-.13.29-.35.43-.52.14-.17.2-.29.29-.48.1-.2.05-.36-.02-.5-.07-.14-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.5.07-.76.36-.26.29-.99.97-.99 2.36 0 1.39 1.01 2.73 1.15 2.92.14.2 1.98 3.02 4.8 4.23.67.29 1.2.46 1.61.59.68.22 1.3.19 1.79.12.55-.08 1.72-.7 1.96-1.37.24-.67.24-1.25.17-1.37-.07-.12-.26-.2-.55-.34zM16.03 3C8.85 3 3 8.74 3 15.82c0 2.5.73 4.83 1.98 6.81L3 29l6.55-1.91c1.9 1.03 4.06 1.57 6.48 1.57 7.18 0 13.03-5.74 13.03-12.82C29.06 8.74 23.21 3 16.03 3zm0 23.47c-2.11 0-4.07-.61-5.73-1.66l-.41-.26-3.89 1.13 1.16-3.79-.27-.39c-1.18-1.69-1.8-3.67-1.8-5.68 0-5.77 4.82-10.47 10.74-10.47 5.92 0 10.74 4.7 10.74 10.47 0 5.77-4.82 10.65-10.74 10.65z"/>
+      </svg>
 
-<section class="hero">
+      WhatsApp
 
-  <h1>
-    Blog Modern GitHub Pages
-  </h1>
+    </a>
 
-  <p>
-    Website gratis dengan desain modern, responsive mobile,
-    support popup ads, dan bebas edit HTML/CSS/JavaScript.
-  </p>
-
-  <a href="#" class="btn">
-    Mulai Membaca
-  </a>
-
-</section>
-
-<section class="container">
-
-  <h2 class="section-title">
-    Artikel Terbaru
-  </h2>
-
-  <div class="grid">
-
-    <div class="card">
-
-      <img src="https://picsum.photos/600/400?random=1">
-
-      <div class="card-content">
-
-        <h3>
-          Cara Membuat Website Gratis
-        </h3>
-
-        <p>
-          Belajar membuat website gratis menggunakan GitHub Pages
-          lengkap dengan monetisasi popup ads.
-        </p>
-
-        <a href="#" class="btn">
-          Baca Artikel
-        </a>
-
-      </div>
-
-    </div>
-
-    <div class="card">
-
-      <img src="https://picsum.photos/600/400?random=2">
-
-      <div class="card-content">
-
-        <h3>
-          Anime Trending 2026
-        </h3>
-
-        <p>
-          Rekomendasi anime populer dengan traffic tinggi untuk niche blog.
-        </p>
-
-        <a href="#" class="btn">
-          Lihat Detail
-        </a>
-
-      </div>
-
-    </div>
-
-    <div class="card">
-
-      <img src="https://picsum.photos/600/400?random=3">
-
-      <div class="card-content">
-
-        <h3>
-          Download Center
-        </h3>
-
-        <p>
-          Landing page download yang cocok untuk direct link monetization.
-        </p>
-
-        <a href="#" class="btn">
-          Download
-        </a>
-
-      </div>
-
+    <div class="footer">
+      © 2026 Widya
     </div>
 
   </div>
-
-</section>
-
-<section class="container">
-
-  <h2 class="section-title">
-    Kenapa GitHub Pages?
-  </h2>
-
-  <div class="features">
-
-    <div class="feature-box">
-      <h3>Gratis Selamanya</h3>
-
-      <p>
-        Hosting gratis tanpa biaya bulanan.
-      </p>
-    </div>
-
-    <div class="feature-box">
-      <h3>Support Popup Ads</h3>
-
-      <p>
-        Bebas memasang JavaScript popup dan monetisasi lainnya.
-      </p>
-    </div>
-
-    <div class="feature-box">
-      <h3>Loading Cepat</h3>
-
-      <p>
-        CDN GitHub membuat website ringan dan cepat.
-      </p>
-    </div>
-
-    <div class="feature-box">
-      <h3>Full Custom HTML</h3>
-
-      <p>
-        Bisa edit HTML, CSS, dan JavaScript tanpa batas.
-      </p>
-    </div>
-
-  </div>
-
-</section>
-
-<footer>
-
-  © 2026 My Awesome Blog — Powered by GitHub Pages
-
-</footer>
 
 </body>
 </html>
